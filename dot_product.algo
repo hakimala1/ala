@@ -1,0 +1,14 @@
+ALGORITHM dot_product
+VAR
+    v1,v2 : ARRAY_OF FLOAT[3];
+    p : FLOAT;
+    i : INTEGER;
+BEGIN
+    p :=0
+    i :=0
+    WHILE (i<3) DO
+        p:=p+(v1[i]*v2[i])
+        i:=i+1
+    END_WHILE
+    write ("le produit scalaire de v1 et v2 est : ", p)
+END 
