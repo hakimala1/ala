@@ -1,0 +1,28 @@
+ALGORITHM Vecteur-ortho-function
+FUNCTION vect-ortho(v1 : ARRAY_OF FLOAT[3] ; v2 : ARRAY_OF FLOAT[3]) : FLOAT
+VAR
+    p : FLOAT;
+    i : INTEGER;
+BEGIN
+    p :=0
+    i :=0
+    WHILE (i<3) DO
+        p:=p+(v1[i]*v2[i])
+        i:=i+1
+    END_WHILE
+    RETURN p ;
+END
+
+
+
+VAR
+    v1,v2 : ARRAY_OF FLOAT[3];
+    resultat : FLOAT
+BEGIN
+    resultat := vect-ortho(v1,v2)
+    IF (resultat==0) THEN
+        write("les deux vecteur sont orthogonaux")
+    ELSE
+        write("les deux vecteur ne sont pas orthogonaux")
+    END_IF
+END

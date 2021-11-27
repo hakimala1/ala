@@ -1,6 +1,7 @@
+
 ALGORITHM dot_product
+PROCEDURE product(v1 : ARRAY_OF FLOAT[3] ; v2 : ARRAY_OF FLOAT[3])
 VAR
-    v1,v2 : ARRAY_OF FLOAT[3];
     p : FLOAT;
     i : INTEGER;
 BEGIN
@@ -11,4 +12,10 @@ BEGIN
         i:=i+1
     END_WHILE
     write ("le produit scalaire de v1 et v2 est : ", p)
+END
+
+VAR
+    v1,v2 : ARRAY_OF FLOAT[3];
+BEGIN
+ product(v1,v2)
 END 
